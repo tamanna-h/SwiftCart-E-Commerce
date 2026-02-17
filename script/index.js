@@ -1,8 +1,12 @@
-const loadProducts = () => {
-    fetch('https://fakestoreapi.com/products')
-    .then((res) => res.json())
-    .then((data) => displayProduct(data))
-}
+const loadProducts = async () => {
+    try {
+        const res = await fetch('https://fakestoreapi.com/products');
+        const data = await res.json();
+        displayProduct(data);
+    } catch (error) {
+        console.error('Failed to load products', error);
+    }
+};
 
 const loadCategoryProducts = async () => {
     const res = await fetch('https://fakestoreapi.com/products/categories')
