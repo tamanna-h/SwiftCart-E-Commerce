@@ -17,26 +17,27 @@
 <body class="bg-gray-50 text-gray-800">
 
 <!-- NAVBAR -->
-<header class="bg-white shadow">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <h1 class="text-2xl font-bold text-indigo-600">SwiftCart</h1>
 
-    <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="index.html" class="hover:text-indigo-600">Home</a>
-      <a href="product.html" class="text-indigo-600">Products</a>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="index.html" class="text-indigo-600">Home</a>
+      <a href="product.html" class="hover:text-indigo-600">Products</a>
       <a href="#" class="hover:text-indigo-600">About</a>
       <a href="#" class="hover:text-indigo-600">Contact</a>
     </nav>
 
-    <span class="text-xl">🛒</span>
+    <button class="relative">
+      <i class="fa-solid fa-cart-shopping text-2xl text-indigo-600"></i>
+      <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+    </button>
   </div>
 </header>
 
-<!-- PAGE TITLE  -->
+
 <section class="py-12 text-center">
   <h2 class="text-3xl font-bold mb-6">Our Products</h2>
-
-  <!-- FILTER BUTTONS -->
   <div id="level-container" class="flex flex-wrap justify-center gap-3">
     <button class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm">All</button>
   </div>
@@ -46,7 +47,7 @@
 <section class="pb-20">
   <div class="max-w-7xl mx-auto px-6">
     <div id="product-container" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <!-- Products will be loaded here -->
+      
     </div>
   </div>
 </section>
@@ -67,51 +68,76 @@
   </form>
 </dialog>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="bg-slate-900 text-gray-300 py-12">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+  <div class="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-4">
+
+    <!-- Brand -->
     <div>
-      <h3 class="text-xl font-bold text-white mb-3">SwiftCart</h3>
-      <p class="text-sm">
-        Your one-stop shop for quality products and fast delivery.
+      <h4 class="text-lg font-bold text-indigo-400 mb-3">SwiftCart</h4>
+      <p class="text-sm leading-relaxed text-gray-400">
+        Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast
+        delivery, and excellent support.
       </p>
     </div>
 
+    <!-- Quick Links -->
     <div>
-      <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
-        <li>Home</li>
-        <li>Products</li>
-        <li>About</li>
-        <li>Contact</li>
+      <h5 class="font-semibold text-white mb-4 text-xs uppercase tracking-widest">Quick Links</h5>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="index.html"   class="hover:text-white transition">Home</a></li>
+        <li><a href="product.html" class="hover:text-white transition">Products</a></li>
+        <li><a href="#"            class="hover:text-white transition">About</a></li>
+        <li><a href="#"            class="hover:text-white transition">Contact</a></li>
       </ul>
     </div>
 
+    <!-- Support -->
     <div>
-      <h4 class="text-white font-semibold mb-3">Support</h4>
-      <ul class="space-y-2 text-sm">
-        <li>FAQ</li>
-        <li>Shipping</li>
-        <li>Returns</li>
-        <li>Privacy Policy</li>
+      <h5 class="font-semibold text-white mb-4 text-xs uppercase tracking-widest">Support</h5>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-white transition">Shipping</a></li>
+        <li><a href="#" class="hover:text-white transition">Returns</a></li>
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
       </ul>
     </div>
 
+    <!-- Newsletter -->
     <div>
-      <h4 class="text-white font-semibold mb-3">Newsletter</h4>
-      <div class="flex">
-        <input type="email" placeholder="Enter your email"
-               class="flex-1 px-3 py-2 rounded-l-md text-black">
-        <button class="bg-indigo-600 px-4 rounded-r-md text-white">
+      <h5 class="font-semibold text-white mb-4 text-xs uppercase tracking-widest">Subscribe to Our Newsletter</h5>
+      <p class="text-sm text-gray-400 mb-3 leading-relaxed">
+        The latest news, articles, and resources, sent to your inbox weekly.
+      </p>
+      <div class="flex rounded-md overflow-hidden">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="flex-1 px-3 py-2 text-sm text-gray-800 bg-white outline-none"
+        />
+        <button class="bg-indigo-600 hover:bg-indigo-700 transition px-4 text-white text-sm font-semibold whitespace-nowrap">
           Subscribe
         </button>
       </div>
     </div>
+
   </div>
 
-  <p class="text-center text-xs text-gray-500 mt-10">
-    © 2025 SwiftCart. All rights reserved.
-  </p>
+  <div class="border-t border-slate-700 mt-10 pt-6 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    
+    <p class="text-xs text-gray-500">
+      © 2025 SwiftCart, Inc. All rights reserved.
+    </p>
+
+    <div class="flex gap-5 text-lg text-gray-400">
+      <i class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></i>
+      <i class="fa-brands fa-twitter hover:text-white cursor-pointer transition"></i>
+      <i class="fa-brands fa-instagram hover:text-white cursor-pointer transition"></i>
+      <i class="fa-brands fa-linkedin hover:text-white cursor-pointer transition"></i>
+      <i class="fa-regular fa-envelope hover:text-white cursor-pointer transition"></i>
+    </div>
+
+  </div>
 </footer>
 
 <script src="script/index.js"></script>
