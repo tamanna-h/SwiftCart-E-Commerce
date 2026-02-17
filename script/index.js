@@ -13,7 +13,7 @@ const loadCategoryProducts = async () => {
 loadCategoryProducts()
 
 const displayCategories = (categories) => {
-    console.log(categories);
+    // console.log(categories);
     const levelContainer = document.getElementById('level-container');
     levelContainer.innerHTML = '';
     
